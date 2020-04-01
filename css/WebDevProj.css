@@ -1,0 +1,553 @@
+:root {
+  --green-button: rgb(0, 85, 85);
+  --icon-blue: #4078c0;
+  --lightgreen-background: rgb(211, 255, 202);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Verdana", "Geneva", sans-serif;
+  margin: auto 0;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+#logo {
+  width: auto;
+  height: auto;
+  max-width: 45%;
+  max-height: 50px;
+  margin: 10px;
+}
+
+.navbar-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links ul {
+  display: flex;
+  height: 100%;
+}
+
+.navbar-links li a {
+  color: black;
+  padding: 10px;
+  display: block;
+}
+
+.toggle-button i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+  color: black;
+  font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  .toggle-button i {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+#welcome-section {
+  position: relative;
+  text-align: center;
+}
+
+#welcome-image {
+  width: 100%;
+  height: 675px;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(23%);
+}
+
+#welcome-section button {
+  margin: auto 30px;
+}
+
+.centered {
+  width: 100%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-title {
+  font-size: 45px;
+}
+
+.title {
+  font-size: 30px;
+
+  padding-top: 100px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.centered p {
+  margin: 40px 10px 90px;
+}
+
+button {
+  width: 150px;
+  height: 55px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.transparent-button {
+  background-color: transparent;
+  color: white;
+  border-width: 1.5px;
+  border-color: white;
+  border-style: solid;
+}
+
+.default-button {
+  background-color: var(--green-button);
+  color: whitesmoke;
+  border: none;
+}
+
+#down-arrow {
+  top: 80%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  width: 40px;
+  height: 35px;
+  margin-top: 65px;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.grid-about {
+  text-align: center;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 50px;
+}
+
+#services-section {
+  background-color: var(--lightgreen-background);
+  background-size: auto;
+}
+
+#services-section > h2 {
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+.text-block {
+  display: inline-block;
+  width: 600px;
+}
+
+.service-grid {
+  margin-top: 100px;
+}
+
+.grid {
+  justify-items: center;
+  max-width: 900px;
+  margin: 50px auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding-bottom: 60px;
+}
+
+.card {
+  width: 280px;
+  border-radius: 2px;
+  margin: 10px 5px;
+}
+.service-card {
+  background: #fff;
+  height: 300px;
+  padding: 30px 10px 5px;
+}
+
+i {
+  font-size: 35px;
+}
+
+.services-button {
+  margin-top: 20px;
+  color: black;
+  border-color: black;
+  height: 50px;
+  font-weight: 600;
+}
+
+#button-group {
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.works-button {
+  width: 135px;
+  height: 45px;
+  display: inline-block;
+  color: black;
+  margin-bottom: 5px;
+  border-color: var(--green-button);
+  border-width: 2px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.works-button:hover {
+  color: white;
+  background-color: var(--green-button);
+}
+
+.work-card {
+  position: relative;
+  height: 280px;
+  width: 280px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.work-card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: #fff;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.work-card:hover .card-overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.card-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+#pricing-section {
+  background-color: rgb(223, 222, 222);
+}
+
+.price-card {
+  background-color: white;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px;
+}
+
+.price-block {
+  width: 100%;
+  height: 30%;
+  background: rgb(71, 71, 248);
+  color: #fff;
+  transform: skewY(-4deg);
+  transform-origin: top left;
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+.price-block-text {
+  transform: skewY(4deg);
+}
+
+strong {
+  font-size: 25px;
+}
+
+.plan-feature {
+  margin-top: 30px;
+  font-size: 18px;
+  border-bottom: solid 1px #000;
+  padding-bottom: 5px;
+}
+
+.plan-features-block {
+  padding: 0 55px;
+}
+
+.plan-button {
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid;
+  font-size: 17px;
+}
+
+.plan-button:hover {
+  color: white;
+  background: var(--green-button);
+  border: none;
+}
+
+.member-image {
+  object-position: center;
+  height: 250px;
+  border-radius: 4px;
+}
+
+.member-contact {
+  cursor: pointer;
+  padding: 0px 5px;
+}
+
+.member-contact:hover {
+  color: var(--icon-blue);
+  transition: 0.3s ease-out;
+}
+
+#blog-section {
+  background: var(--lightgreen-background);
+}
+
+.blog-post {
+  display: grid;
+  column-gap: 30px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.blog-image {
+  width: 430px;
+  height: 275px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-text-block {
+  display: inline-block;
+  width: 430px;
+  text-align: start;
+}
+
+.blog-container {
+  margin-top: 80px;
+  display: grid;
+  column-gap: 25px;
+  margin-bottom: 60px;
+}
+
+.left-side {
+  grid-column: 1;
+}
+.right-side {
+  grid-column: 2;
+}
+
+.post-title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.post-link {
+  cursor: pointer;
+}
+
+.date-category {
+  display: flex;
+  align-items: center;
+}
+
+.date-category i {
+  padding-right: 10px;
+}
+
+.calendar {
+  padding-left: 0;
+}
+
+.category {
+  padding-left: 30px;
+}
+
+.button-more {
+  margin-bottom: 100px;
+}
+
+#contact-section {
+  position: relative;
+}
+
+.contact-image {
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(20%);
+  min-height: 1000px;
+  max-height: 1200px;
+}
+
+#contact-grid {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contact-link {
+  padding: 50px;
+}
+
+#contact-grid i {
+  background: #3854f5;
+  border-radius: 50%;
+  width: 75px;
+  padding: 20px;
+}
+#contact-grid p {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#contact-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.field-left {
+  width: 50%;
+  float: left;
+  padding-right: 10px;
+}
+.field-right {
+  width: 50%;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.send-button {
+  float: right;
+}
+
+input {
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+.send-button {
+  font-size: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  background: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .left-side {
+    grid-column: 1;
+  }
+  .right-side {
+    grid-column: 1;
+  }
+  #contact-form {
+    width: 90%;
+  }
+  .text-block {
+    display: inline-block;
+    width: 400px;
+  }
+
+  .blog-post {
+    flex-direction: column;
+  }
+
+  #contact-grid {
+    flex-direction: column;
+  }
+
+  .contact-link {
+    padding: 20px;
+  }
+
+  .contact-image {
+    min-height: 1400px;
+  }
+}
